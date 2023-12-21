@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EDA page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url("{% static 'blue.jpeg' %}");
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            font-size: 30px;
+            color: #DC143C;
+        }
+        h2 {
+            font-size: 25px;
+            color: #B22222;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        .img-text-cont {
+            display: flex;
+            align-items: center;
+        }
+
+        .graph-image {
+            width: 500px; 
+            margin-right: 10px;
+            margin-left:10px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <div class="cont2">
+            <h1>Exploratory Data Analysis</h1>
+        </p>
+
+        <h2>Diabetes Prediction -Feature Importance</h2>
+        <div class="img-text-cont">
+        <img class="graph-image" src= "{% static 'Screenshot (187).png' %}">
+        <p>
+        <ul>
+        <li>According to the World Health Organisation (WHO), diabetes is considered a chronic disease and a leading cause of death worldwide.
+         </li>
+        <li> Random Forest Classifier was used for model prediction as it showed high accuracy and good recall scores (measures completeness of positive predictions).</li>
+        <li> The model used the SMOTE technique to handle the imbalanced data. A few suggestions include the need to consider other techniques like oversampling
+            or undersampling, for more efficiency in treating the imbalanced data.
+        </li><br>
+        <li> Feature importance depicts the importance of features such as HbA1c level(0.43) and 
+            blood glucose level (0.25) as a good predictor of identifying diabetes patients.
+        </li>
+        <li> Research studies have proven that elevated levels of HbA1c show a risk for cardiovascular disease and stroke in people with diabetes. </li><br>
+         <li> Next age (0.18) was the third important feature, as type 2 diabetes is more commonly found in the older age group.</li>
+         <li> Body Mass Index (BMI) was the next highlighted feature, as elevated levels of BMI are risk factors for type 2 diabetes. The findings align with research studies conducted in this field</li>
+         <li> Factors such as smoking history, hypertension, and heart disease showed less impact in this study. </li>
+        </ul>
+        
+        </p>
+        </div>
+        

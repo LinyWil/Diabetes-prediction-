@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diabetes Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-image: url("{% static 'AI.jpeg' %}"); 
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed; 
+            padding: 30px;
+        }
+       
+        h1 {
+            font-size: 30px; 
+            color: #FF0000; 
+        }
+
+        .result-container {
+            background-color: rgba(255, 255, 255, 0.5); 
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 80%; 
+        }
+
+        .diab-pred {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+        
+        }
+
+    </style>
+</head>
+</head>
+<body>
+    <h1>Diabetes Prediction Result</h1>
+    <div class="result-container">
+        <p class="diab-pred">Diabetes Prediction: {{ predicted_d }}</p>
+        {% if predicted_d == 1 %}
+            <p>You don't have diabetes</p>
+        {% elif predicted_d == 0 %}
+            <p>You have diabetes</p>
+        {% endif %}
+        <a href="/">Predict Again</a>
+    </div>
+</body>
+</html>
+
+
